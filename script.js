@@ -7,7 +7,6 @@ async function getUsersByKeyword(event) {
   // However we need the keyword ?
   const users = await fetch(USERS_API_URL + userNameTyped);
   const { items } = await users.json();
-  historyArray.push(items[0]);
 
   generateUserCards(items);
 }
